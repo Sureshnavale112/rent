@@ -1,0 +1,938 @@
+
+ div.preview-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+div.preview-image img.focused {
+    border: #fbb20f 2px solid;
+}
+
+div.image img:hover {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.32), 0 0 0 0px
+        rgba(0, 0, 0, 0.16);
+        
+}
+
+.heading {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#grid {
+    margin-bottom: 30px;
+}
+
+.quick_look {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -51px;
+    background: transparent;
+    border: #FFF 2px solid;
+    padding: 8px 25px;
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.quick_look:hover {
+    background: #FFF;
+    color: #333;
+}
+
+.product-info {
+    float: left;
+    margin-left: 20px;
+}
+
+div.product-info ul {
+    margin: 10px 0px;
+    padding: 0;
+}
+
+div.product-info li {
+    cursor: pointer;
+    list-style-type: none;
+    display: inline-block;
+    color: #F0F0F0;
+    text-shadow: 0 0 1px #666666;
+    font-size: 14px;
+}
+
+div.product-info .selected {
+    color: #e4a400;
+    text-shadow: 0 0 5px #ffb900;
+}
+
+.product-title {
+    font-size: 1.5em;
+}
+
+.product-category {
+    margin: 20px 0px;
+    font-size: 0.9em;
+    color: #c4c4c5;
+    text-transform: uppercase;
+    border-left: #c4c4c5 3px solid;
+    padding: 0px 5px 0px 5px;
+    text-transform: uppercase;
+}
+
+button.btn-info {
+    padding: 10px;
+    margin: 20px 20px 10px 0px;
+    padding: 10px 20px;
+    background: #67bdf7;
+    border: #60b2e8 1px solid;
+    border-radius: 3px;
+    color: #FFF;
+}
+
+.ui-widget-header {
+    border: none !important;
+    background: none !important;
+}
+
+#product-view {
+    border: #CCC 1px solid;
+   /*  overflow: auto; */
+    display: inline-block;
+    padding-top: 20px;
+     margin-top: 30px; 
+
+    text-align:left;
+}
+div.preview-image img.thumbnail {
+    width: 60px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#thumbnail-container {
+    width: 70px;
+    float: left;
+}
+
+#preview-enlarged {
+    float: right;
+} 
+
+ @media screen and (min-width: 1224px) {
+    div.image {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1044px) and (max-width: 1224px) {
+    div.image {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 845px) and (max-width: 1044px) {
+    div.image {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 560px) {
+    #preview-enlarged {
+        float: none;
+    }
+    #thumbnail-container {
+        width: auto;
+        margin-top: 10px;
+    }
+} 
+ 
+
+
+/*=========================================================
+	06 -> icons from 
+===========================================================*/
+ .col-md-2-new {
+   
+    width: 9.66667%; 
+    float: left;
+    
+  }
+  
+  
+  @media (max-width: 767px) {
+    .col-xs-6 {
+        width: 50%; 
+    }
+  }
+  
+  .-iconproduc {
+  background-color: white;
+    padding: 5px;
+    border: 0.5px solid #D10024;
+    border-radius: 8px;
+  margin: top 5px;
+  }
+  
+  .iconproducct-img img {
+  max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0px 12px;
+  padding: 0px;
+  border-radius: 0px;
+  }
+  
+  .iconproduct-body {
+    text-align: center;  
+   color: white;
+  }
+  
+  .iconproduct-name- a {
+    color: #333; 
+    text-decoration: none;
+    font-size: 12px; 
+  display: inline-block;
+  text-align: center;
+  
+  }
+  
+  .iconproducct-img img:hover,
+  .iconproducct-img img:active {
+    opacity: 0.8; 
+    filter: grayscale(100%) brightness(50%); 
+  }
+  
+  .iconproduct-name- a:hover,
+  .iconproduct-name- a:active {
+    color: red; } */
+  
+  /*==================================
+      06 -> icons end
+  ====================================*/
+
+
+
+  /*----------------------------*\
+	carousel   start
+\*----------------------------*/
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .carousel-nav button {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .carousel-nav button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+
+/* ************************************ */
+         /* see-btn  */
+/* ************************************ */
+
+
+.see-more {
+    background-color: #D10024; 
+    color: white; 
+    border: none; 
+    padding: 3px 10px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px;
+    margin: 4px 2px; 
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.see-more:hover {
+    background-color: #45a049; 
+}
+
+.see-more i {
+    margin-right: 5px; 
+}
+
+/* ********************************* 
+          /see-btn  
+ ********************************* */
+
+
+/* log input design */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 60%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group button {
+    width: 60%;
+    padding: 10px;
+    background-color: #D10024;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background-color: green;
+}
+#otp-section {
+    display: none;
+}
+
+
+
+
+
+
+
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.modal-content {
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 20px;
+}
+
+.modal-header {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.modal-header .close {
+    color: #000;
+    font-size: 30px;
+}
+
+.modal-body {
+    padding: 0px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.login-form input[type=text], 
+.login-form input[type=password] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #D10024;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-form input[type=submit] {
+    background-color: #D10024;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.forgot {
+    margin-top: 10px;
+}
+
+.forgot a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.login-image img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+  
+   /* ************************************ 
+             partener registration 
+/* ************************************ */
+
+#form {
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+}
+
+.signup-form {
+    background: #f2f2f2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.signup-form form {
+    margin-top: 20px;
+}
+
+.signup-form select,
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="file"] {
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #D10024;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.signup-form input[type="submit"]:hover {
+    background:#058325;
+}
+
+.signup-form .form_control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form .title {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .signup-form {
+        padding: 20px;
+    }
+
+    .signup-form h2 {
+        font-size: 20px;
+    }
+
+    .signup-form select,
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="file"],
+    .signup-form input[type="submit"] {
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+
+    .signup-form .form_control {
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .signup-form {
+        padding: 15px;
+    }
+
+    .signup-form h2 {
+        font-size: 18px;
+    }
+
+    .signup-form select,
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="file"],
+    .signup-form input[type="submit"] {
+        padding: 6px;
+        margin-bottom: 10px;
+    }
+
+    .signup-form .form_control {
+        padding: 6px;
+        margin-bottom: 10px;
+    }
+}
+
+.girl {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+
+/****************
+ sign up page css
+*******************/
+
+.login-container {
+    display: flex;
+    margin: 0 auto; 
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%; 
+    padding: 20px;
+    background-color: #f6f9fa;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-image {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 0% 0% 0% 0%;
+}
+
+.login-form {
+    flex: 1;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    max-width: 400px;
+    border-radius: 0% 20% 20% 0%;
+    width: 100%; 
+    margin-left: 20px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px; 
+    font-size: 16px; 
+    color: #333; 
+}
+.login-form input[type="number"],
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="mobile"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc; 
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #D10024;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #900019; }
+
+@media (max-width: 800px) {
+    .login-container {
+        flex-direction: column;
+    }
+    .login-image,
+    .login-form {
+        width: 100%; 
+        max-width: none; 
+        margin: 10px 0; 
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .login-form input[type="number"],
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="mobile"] {
+        padding: 8px; 
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 400px) {
+    .login-form input[type="number"],
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="mobile"] {
+        padding: 6px; 
+        font-size: 12px;
+    }
+}
+
+input[type="number"] {
+width: 100%;
+padding: 10px;
+margin: 8px 0;
+box-sizing: border-box;
+border: 2px solid #ccc;
+border-radius: 4px;
+}
+
+input[type="number"]:focus {
+border-color: #555;
+outline: none;
+}
+
+
+/****************
+ /sign up page css
+*******************/
+
+
+
+.nav-tabs.text-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+	.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-image {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.login-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.login-form {
+    flex: 2;
+    text-align: left;
+}
+
+.login-form h2 {
+    margin-bottom: 10px;
+}
+
+.login-form small {
+    display: block;
+    margin-bottom: 20px;
+    color:#45a049
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="submit"],
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.login-form .btn {
+    width: auto;
+    display: inline-block;
+}
+
+
+
+
+/****************************
+login form  css
+****************************/
+
+
+.login-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%; 
+    padding: 20px;
+    background-color: #f6f9fa;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-image {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 0% 0% 0% 0%;
+}
+
+.login-form {
+    flex: 1;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    max-width: 400px;
+    border-radius: 0% 20% 20% 0%;
+    width: 100%;
+    margin-left: 20px; 
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color:#D10024;
+}
+
+.login-form label {
+    display: block;
+    text-align: center;
+    margin-bottom: 0px; 
+    font-size: 14px; 
+    color: #326; 
+}
+
+.login-form input[type="text"],
+.login-form input[type="number"],
+.login-form input[type="password"],
+.login-form input[type="mobile"] {
+    width: calc(100% - 20px);
+    padding: 05px;
+    margin: 10px 0;
+    border: 2px solid #ccc; 
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.login-form input[type="submit"] {
+    width: 95%;
+    padding: 5px;
+    background-color: #D10024;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #900019; 
+}
+
+
+@media (max-width: 800px) {
+    .login-container {
+        flex-direction: column;
+    }
+    .login-image,
+    .login-form {
+        width: 100%; 
+        max-width: none; 
+        margin: 10px 0; 
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="mobile"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="mobile"] {
+        padding: 6px; 
+        font-size: 12px; 
+    }
+}
+
+/*********
+accoumt  dropdown
+**********/
+
+
+.dropdown-menu {
+    padding: 4px !important;
+    color: #D10024;
+    background-color: #1E1F29;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 4px 2px;
+    text-decoration: none;
+    color: #D10024;
+    font-size: 12px;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: white;
+    color: #D10024;
+    text-decoration: none;
+}
+
+.dropdown-item + .dropdown-item {
+    border-top: 1px solid #ddd;
+}
+
+
+/* footer icon  */
+
+
+.social-icon {
+    list-style: none;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+}
+
+.social-icon li {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.social-icon a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon a:hover {
+    background-color: red;
+    color: #000;
+}
+
+
+@media (max-width: 768px) {
+    .social-icon {
+        justify-content: center;
+    }
+    .social-icon a {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icon {
+        justify-content: center; 
+    }
+    .social-icon a {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 16px;
+    }
+}
+
+
+
+/* /footer icon  */
